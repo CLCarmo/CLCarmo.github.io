@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --custom-gradient: linear-gradient(73deg, rgba(252, 176, 69, 1) 0%, rgba(255, 124, 68, 1) 9%, rgba(255, 43, 43, 1) 22%, rgba(242, 9, 9, 1) 45%, rgba(240, 16, 172, 1) 64%, rgba(130, 24, 177, 1) 88%, rgba(24, 34, 177, 1) 100%);
+}
+
+
+*{
+    margin: 0;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/*Header settings*/
+#Header-BarMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
+    background: rgb(25,19,4);
+    background: linear-gradient(257deg, rgba(25,19,4,1) 0%, rgba(87,17,100,1) 17%, rgba(4,3,19,1) 92%);
+}
+
+.Bar-Menu{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    
+    list-style: none; 
+}
+
+.Bar-Menu li> a{
+    padding-inline: 20px;
+    color: rgb(154, 154, 154); /
+}
+
+.Bar-Menu li> a:hover{
+    font-size: 102%;
+    font-weight: 200;
+    color: rgb(255, 255, 255); 
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/* Main settings*/
+.Content-Main{
+ display: flex;
+ flex-direction: row;
+ background: rgb(181,137,28);
+background: linear-gradient(245deg, rgba(181,137,28,1) 0%, rgba(175,34,202,1) 22%, rgba(4,3,19,1) 74%);
+ height: 500px;
+}
+.writtenContent-Main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 60px;
+    gap: 10px;
+    color: #635964;
+    font-size: 15px;
+}
+.tittle{ 
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    gap: 0px 10px;
+    color: white;
+}
+.sutittle{
+    font-size: 20px;
+    color:white;
+}
+
+.writtenContent-Main>p>span{
+    font-weight: bold;
+}
+
+
+.writtenContent-Main>form>input{
+    background-color: rgba(47,33,48,255);
+    color: white;
+    padding: 8px;
+    border: none;
+    width: 300px;
+
+}
+.writtenContent-Main>form>button{
+    color: white;
+    background-color:rgb(252,176,69);
+    background:linear-gradient(73deg, rgba(252,176,69,1) 0%, rgba(255,124,68,1) 9%, rgba(255,43,43,1) 22%, rgba(242,9,9,1) 45%, rgba(240,16,172,1) 64%, rgba(130,24,177,1) 88%, rgba(24,34,177,1) 100%);;
+    border-radius: 7px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.ImageContent-Main {
+    width: 45%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
+}
+.ImageContent-Main> img{
+    max-width: 90%;
+    height: auto;
+    
+}
+
+.Titulo-Tecnologias{
+    text-align: center;
+    color: white;
+    background: rgb(177,24,176);
+    background: linear-gradient(225deg, rgba(177,24,176,1) 0%, rgba(130,24,177,1) 22%, rgba(6,7,20,1) 67%);
+    padding: 25px;
+    border: none;
+}
+
+#Tecnologias{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    background: rgb(177,24,176);
+    background: linear-gradient(194deg, rgba(177,24,176,1) 0%, rgba(130,24,177,1) 0%, rgba(6,7,20,1) 28%);
+    height: 500px;
+}
+
+
+.tecnologias{
+    border-bottom:5px solid transparent; 
+    border-image: var(--custom-gradient) 1; 
+    width: 260px;
+    height: 300px;
+    font-size: 14px;
+    padding: 20px;
+    background-color: #18151e;
+    border-top-left-radius: 20%;
+}
+.tecnologias> .content{
+    color: aliceblue;
+    
+}
+#Footer{
+display: flex;
+flex-direction: column-reverse;
+justify-content: center;
+background-color:#0c0910;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
