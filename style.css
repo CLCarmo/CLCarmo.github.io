@@ -98,6 +98,12 @@ background: linear-gradient(245deg, rgba(181,137,28,1) 0%, rgba(175,34,202,1) 22
     border: none;
 }
 
+#greeting {
+    color: white; /* Define a cor do texto como branco */
+    font-size: 20px; /* Opcional: ajusta o tamanho da fonte */
+    margin-top: 10px; /* Opcional: adiciona um pequeno espaço acima */
+}
+
 .ImageContent-Main {
     width: 45%; 
     display: flex; 
