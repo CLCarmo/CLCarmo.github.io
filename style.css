@@ -1,12 +1,20 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --custom-gradient: linear-gradient(73deg, rgba(252, 176, 69, 1) 0%, rgba(255, 124, 68, 1) 9%, rgba(255, 43, 43, 1) 22%, rgba(242, 9, 9, 1) 45%, rgba(240, 16, 172, 1) 64%, rgba(130, 24, 177, 1) 88%, rgba(24, 34, 177, 1) 100%);
+    /* Definindo cores e gradientes como variáveis */
+    --color-primary: rgb(252,176,69);
+    --color-secondary: rgb(255,124,68);
+    --color-tertiary: rgb(255,43,43);
+    --color-background: #060714;
+    --color-text: #635964;
+    --color-hover: rgb(255, 255, 255);
+    
+    /* Gradiente customizado */
+    --custom-gradient: linear-gradient(73deg, var(--color-primary) 0%, var(--color-secondary) 9%, var(--color-tertiary) 22%, rgba(242, 9, 9, 1) 45%, rgba(240, 16, 172, 1) 64%, rgba(130, 24, 177, 1) 88%, rgba(24, 34, 177, 1) 100%);
 }
 
-
-*{
+* {
+    /* Resetando margin e decorando texto para todos os elementos */
     margin: 0;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
@@ -14,94 +22,108 @@
     font-style: normal;
 }
 
-/*Header settings*/
-#Header-BarMenu{
+/* Configurações do Header */
+#Header-BarMenu {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding: 10px;
     margin: auto;
-    background: rgb(25,19,4);
     background: linear-gradient(257deg, rgba(25,19,4,1) 0%, rgba(87,17,100,1) 17%, rgba(4,3,19,1) 92%);
 }
 
-.Bar-Menu{
+.Bar-Menu {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    
     list-style: none; 
 }
 
-.Bar-Menu li> a{
+.Bar-Menu li > a {
     padding-inline: 20px;
-    color: rgb(154, 154, 154); /
+    color: rgb(154, 154, 154);
+    transition: all 0.3s ease; 
 }
 
-.Bar-Menu li> a:hover{
+.Bar-Menu li > a:hover,
+.Bar-Menu li > a:focus {
     font-size: 102%;
     font-weight: 200;
-    color: rgb(255, 255, 255); 
-    border-bottom: 2px solid rgb(255, 255, 255);
+    color: var(--color-hover);
+    border-bottom: 2px solid var(--color-hover);
 }
 
-/* Main settings*/
-.Content-Main{
- display: flex;
- flex-direction: row;
- background: rgb(181,137,28);
-background: linear-gradient(245deg, rgba(181,137,28,1) 0%, rgba(175,34,202,1) 22%, rgba(4,3,19,1) 74%);
- height: 500px;
+/* Configurações do Main */
+#Main {
+    background-color: var(--color-background);
 }
-.writtenContent-Main{
+
+.Content-Main {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(245deg, rgba(181,137,28,1) 0%, rgba(175,34,202,1) 22%, rgba(4,3,19,1) 74%);
+    height: 500px;
+}
+
+.writtenContent-Main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 50%;
     padding: 60px;
     gap: 10px;
-    color: #635964;
+    color: var(--color-text);
     font-size: 15px;
 }
-.tittle{ 
-    font-family: "Montserrat", sans-serif;
+
+.tittle { 
     font-size: 50px;
     gap: 0px 10px;
     color: white;
 }
-.sutittle{
+
+.sutittle {
     font-size: 20px;
-    color:white;
+    color: white;
 }
 
-.writtenContent-Main>p>span{
+.writtenContent-Main > p > span {
     font-weight: bold;
 }
 
-
-.writtenContent-Main>form>input{
+.writtenContent-Main > form > input {
     background-color: rgba(47,33,48,255);
     color: white;
     padding: 8px;
     border: none;
     width: 300px;
-
+    transition: border 0.3s ease; /
 }
-.writtenContent-Main>form>button{
+
+.writtenContent-Main > form > input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.writtenContent-Main > form > button {
     color: white;
-    background-color:rgb(252,176,69);
-    background:linear-gradient(73deg, rgba(252,176,69,1) 0%, rgba(255,124,68,1) 9%, rgba(255,43,43,1) 22%, rgba(242,9,9,1) 45%, rgba(240,16,172,1) 64%, rgba(130,24,177,1) 88%, rgba(24,34,177,1) 100%);;
+    background: var(--custom-gradient);
     border-radius: 7px;
     padding: 8px;
     cursor: pointer;
     border: none;
+    transition: background-color 0.3s ease; 
+}
+
+.writtenContent-Main > form > button:hover {
+    background-color: var(--color-primary); 
 }
 
 #greeting {
-    color: white; /* Define a cor do texto como branco */
-    font-size: 20px; /* Opcional: ajusta o tamanho da fonte */
-    margin-top: 10px; /* Opcional: adiciona um pequeno espaço acima */
+    color: white; 
+    font-size: 20px; 
+    margin-top: 10px; 
 }
 
 .ImageContent-Main {
@@ -109,36 +131,32 @@ background: linear-gradient(245deg, rgba(181,137,28,1) 0%, rgba(175,34,202,1) 22
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    
-}
-.ImageContent-Main> img{
-    max-width: 90%;
-    height: auto;
-    
 }
 
-.Titulo-Tecnologias{
+.ImageContent-Main > img {
+    max-width: 90%;
+    height: auto;
+}
+
+.Titulo-Tecnologias {
     text-align: center;
     color: white;
-    background: rgb(177,24,176);
     background: linear-gradient(225deg, rgba(177,24,176,1) 0%, rgba(130,24,177,1) 22%, rgba(6,7,20,1) 67%);
     padding: 25px;
     border: none;
 }
 
-#Tecnologias{
+#Tecnologias {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    background: rgb(177,24,176);
     background: linear-gradient(194deg, rgba(177,24,176,1) 0%, rgba(130,24,177,1) 0%, rgba(6,7,20,1) 28%);
-    height: 500px;
+    height: 390px;
 }
 
-
-.tecnologias{
-    border-bottom:5px solid transparent; 
+.tecnologias {
+    border-bottom: 3px solid transparent;
     border-image: var(--custom-gradient) 1; 
     width: 260px;
     height: 300px;
@@ -146,21 +164,126 @@ background: linear-gradient(245deg, rgba(181,137,28,1) 0%, rgba(175,34,202,1) 22
     padding: 20px;
     background-color: #18151e;
     border-top-left-radius: 20%;
-}
-.tecnologias> .content{
-    color: aliceblue;
-    
-}
-#Footer{
-display: flex;
-flex-direction: column-reverse;
-justify-content: center;
-background-color:#0c0910;
-}
-.icons{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
+    position: relative; 
+    gap: 10px;
+    transition: border-bottom 0.3s ease, background-color 0.3s ease; /* Transição suave */
 }
 
+.tecnologias > .content {
+    color: aliceblue;
+}
+
+.tecnologias img {
+    filter: grayscale(100%) brightness(0.5) contrast(1.2);
+    transition: filter 0.3s ease;
+}
+
+/* Desativa o filtro preto e branco ao passar o mouse na div */
+.tecnologias:hover img {
+    filter: none;
+}
+
+/* Adicionando bordas ao passar o mouse na div */
+.tecnologias:hover {
+    border-bottom: 8px solid; 
+}
+
+.Tittle-Frameworks {
+    text-align: center; 
+    color: rgb(255, 255, 255);
+    margin: 20px 0; 
+    font-size: 24px;
+    padding: 10px;
+}
+
+.Framework {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 350px;
+    gap: 10px;
+    background-color: var(--color-background);
+}
+
+.frame {
+    width: 260px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+    gap: 2%;
+    color: white;
+    background-color: #18151e;
+}
+
+.frame .framelink {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease; 
+}
+
+.frame .framelink:hover {
+    border-bottom: 2px solid white;
+}
+
+#Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(73deg, var(--color-primary) 0%, var(--color-secondary) 9%, var(--color-tertiary) 22%, rgba(242, 9, 9, 1) 45%, rgba(240, 16, 172, 1) 64%, rgba(130, 24, 177, 1) 88%, rgba(24, 34, 177, 1) 100%);
+}
+
+.Tittle-Redes {
+    text-align: center; 
+    color: rgb(0, 0, 0);
+    margin-top: 10px; 
+    font-size: 24px;
+}
+.Social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 70px;
+}
+
+.Social-media .icons a img {
+    filter: grayscale(100%) brightness(0.5) contrast(1.2);
+    transition: 0.3s ease; 
+    border-bottom: 3px solid transparent;
+}
+
+.Social-media .icons a img:hover {
+    filter: none;
+    border-bottom: 3px solid whitesmoke; 
+}
+
+.authorship {
+    margin: auto;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .Content-Main {
+        flex-direction: column;
+    }
+
+    .writtenContent-Main {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .ImageContent-Main {
+        width: 100%;
+    }
+
+    .tecnologias {
+        width: 100%;
+    }
+
+    .Framework {
+        flex-direction: column;
+        height: auto;
+    }
+}

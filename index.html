@@ -1,76 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css">
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend - Tecnologias</title>
+</head>
 
 <body>
-  <header id="Header-BarMenu">
-    <a class="Logo-Menu" href=""><img src="Arquivos/Icone-FrontEnd.png" alt="Logo-Menu"></a>
-    <ul class="Bar-Menu">
-        <li class="Menu"><a href="#">Html</a></li>
-        <li class="Menu"><a href="#">Css</a></li>
-        <li class="Menu"><a href="#">JavaScript</a></li>
-    </ul>
-  </header>
-  <main id="Main">
-    <section class="Content-Main">
-        <div class="writtenContent-Main">
-            <h2 class="tittle">Frontend</h2>
-            <h4 class="sutittle">É onde a mágica acontece! </h4>
-            <p>É a arte de criar experiências visuais que encantam os usuários. Com <span style="color: rgb(237, 99, 0);">HTML</span>, <span style="color: rgb(29, 29, 255)">CSS</span> e <span style="color: rgb(201, 211, 5)">JavaScript</span>, os desenvolvedores transformam ideias em interfaces incríveis.</p> 
-            <p>Essa combinação de tecnologias torna a web um lugar mais dinâmico e envolvente, surpreendendo os usuários a cada clique!</p>
+    <header id="Header-BarMenu">
+        <a class="Logo-Menu" href="#">
+            <img src="Arquivos/Icone-FrontEnd.png" alt="Logo-Menu">
+        </a>
+        <nav>
+            <ul class="Bar-Menu">
+                <li class="Menu"><a href="#ferramentas-web">Ferramentas Web</a></li>
+                <li class="Menu"><a href="#frameworks-web">Frameworks</a></li>
+                <li class="Menu"><a href="#contato">Redes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="Main">
+        <section class="Content-Main">
+            <div class="writtenContent-Main">
+                <h2 class="title">Frontend</h2>
+                <h4 class="subtitle">É onde a mágica acontece!</h4>
+                <p>
+                    É a arte de criar experiências visuais que encantam os usuários. Com 
+                    <span style="color: rgb(237, 99, 0);">HTML</span>, 
+                    <span style="color: rgb(29, 29, 255)">CSS</span> e 
+                    <span style="color: rgb(201, 211, 5)">JavaScript</span>, 
+                    os desenvolvedores transformam ideias em interfaces incríveis.
+                </p>
+                <p>
+                    Essa combinação de tecnologias torna a web um lugar mais dinâmico e envolvente, 
+                    surpreendendo os usuários a cada clique!
+                </p>
+                <form>
+                    <input type="text" id="Name-Input" placeholder="Digite seu Nome!" required>
+                    <button type="submit" id="Button-Input">Hello Name</button>
+                </form>
+            </div>
+            <div class="ImageContent-Main">
+                <img src="Arquivos/Banner-Main.png" alt="ilustração para desenvolvimento">
+            </div>
+        </section>
+
+        <section class="Content-Tecnologias" id="ferramentas-web">
+            <h2 class="Titulo-Tecnologias">Ferramentas Web</h2>
+            <div id="Tecnologias">
+                <div class="tecnologias">
+                    <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+                        <img src="Arquivos/tecnologias/Html-Color.svg" alt="Logo HTML">
+                        <h4 class="content">HTML</h4>
+                    </a>
+                    <p class="content">HTML (HyperText Markup Language) é a linguagem padrão para criar páginas da web. 
+                    Ele estrutura o conteúdo. É a base sobre a qual todo o conteúdo da web é construído.</p>
+                </div>
+
+                <div class="tecnologias">
+                    <a href="https://www.w3.org/Style/CSS/" target="_blank">
+                        <img src="Arquivos/tecnologias/Css-Color.svg" alt="Logo CSS">
+                        <h4 class="content">CSS</h4>
+                    </a>
+                    <p class="content">CSS (Cascading Style Sheets) é a linguagem usada para estilizar páginas da web. 
+                    Com CSS, é possível definir cores, fontes, espaçamentos e layouts, tornando as páginas mais atraentes visualmente. 
+                    Ele separa a apresentação do conteúdo, permitindo uma organização mais eficiente.</p>
+                </div>
+
+                <div class="tecnologias">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                        <img src="Arquivos/tecnologias/Javascript-Color.svg" alt="Logo JavaScript">
+                        <h4 class="content">JavaScript</h4>
+                    </a>
+                    <p class="content">JavaScript é uma linguagem de programação que permite adicionar interatividade às páginas da web. 
+                    Com ele, é possível criar animações, validar formulários e responder a eventos do usuário. 
+                    É essencial para construir experiências dinâmicas e envolventes na web.</p>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="Tittle-Frameworks">Frameworks</h2>
+        <section class="Framework" id="frameworks-web">
             
-            <form>
-                <input type="text" id="Name-Input" placeholder="Digite seu Nome !"> 
-                <button id="Button-Input">Hello Name</button>
-            </form>
-        </div>
-        <div class="ImageContent-Main">
-            <img src="Arquivos/Banner-Main.png" alt="ilustracio for development">
-        </div>
-    </section>
-    <h2 class="Titulo-Tecnologias">Ferramentas web</h2>
-    <section id="Tecnologias">
-        <div class="tecnologias">
-            <img src="Arquivos/tecnologias/Html-NoColor.svg" alt="Logo-html">
-            <h4 class="content">HTML <br><br></h4>
-            <p class="content">HTML (HyperText Markup Language) é a linguagem padrão para criar páginas da web. Ele estrutura o conteúdo,. É a base sobre a qual todo o conteúdo da web é construído.</p>
-        </div>
-        <div class="tecnologias">
-            <img src="Arquivos/tecnologias/Css-NoColor.svg" alt="Logo-html">
-            <h4 class="content">CSS<br><br></h4>
-            <p class="content">CSS (Cascading Style Sheets) é a linguagem usada para estilizar páginas da web. Com CSS, é possível definir cores, fontes, espaçamentos e layouts, tornando as páginas mais atraentes visualmente. Ele separa a apresentação do conteúdo, permitindo uma organização mais eficiente.</p>
-        
-        </div>
-        <div class="tecnologias">
-            <img src="Arquivos/tecnologias/Javascript-NoColor.svg" alt="Logo-html">
-            <h4 class="content">JAVA SCRIPT<br><br></h4>
-            <p class="content">JavaScript é uma linguagem de programação que permite adicionar interatividade às páginas da web. Com ele, é possível criar animações, validar formulários e responder a eventos do usuário. É essencial para construir experiências dinâmicas e envolventes na web.</p>
-        
-        </div>
-    </section>
-  </main>
-  <footer id="Footer">
-    <section class="Social-media">
-        <div class="icons">
-            <a href="#" class="icon">
-                <img src="Arquivos/SocialMedia/Facebook-NoColor.svg" alt="Facebook">
-            </a>
-            <a href="#" class="iconfacebook">
-                <img src="Arquivos/SocialMedia/Instagram-NoColor.svg" alt="Twitter">               
-            </a>
-            <a href="#" class="iconWhatsapp">
-                <img src="Arquivos/SocialMedia/Whatsapp-NoColor.svg" alt="Instagram"> 
-            </a>
-            <a href="https://github.com/CLCarmo"><img src="Arquivos/SocialMedia/GuthHubIcon.svg" alt=""></a>
-        </div>
-    </section>
-  </footer>
-  <script src="index.js"></script>
+            <div class="frame">
+                <h4>React</h4>
+                <p>React é uma biblioteca JavaScript para criar interfaces de usuário através de componentes reutilizáveis.</p>
+                <a href="https://react.dev/" target="_blank">
+                    <img src="Arquivos/tecnologias/React-Color.svg" alt="Logo React">
+                    <h4 class="framelink">React</h4>
+                </a>
+            </div>
+            <div class="frame">
+                <h4>Angular</h4>
+                <p>Angular é um framework para aplicações web desenvolvido pelo Google, que permite criar aplicações robustas 
+                e escaláveis utilizando TypeScript.</p>
+                <a href="https://angular.dev/" target="_blank">
+                    <img src="Arquivos/tecnologias/Angular-Color.svg" alt="Logo Angular">
+                    <h4 class="framelink">Angular</h4>
+                </a>
+            </div>
+            <div class="frame">
+                <h4>Vue.js</h4>
+                <p>Vue.js é um framework progressivo para construção de interfaces de usuário, que facilita a integração 
+                com outras bibliotecas e projetos existentes.</p>
+                <a href="https://vuejs.org/" target="_blank">
+                    <img src="Arquivos/tecnologias/VueJs-Color.svg" alt="Logo Vue.js">
+                    <h4 class="framelink">Vue.js</h4>
+                </a>
+            </div>
+            <div class="frame">
+                <h4>Bootstrap</h4>
+                <p>Bootstrap é um framework front-end para desenvolvimento de sites responsivos, que inclui uma coleção 
+                de ferramentas para CSS e JavaScript.</p>
+                <a href="https://getbootstrap.com/" target="_blank">
+                    <img src="Arquivos/tecnologias/Bootstrap-Color.svg" alt="Logo Bootstrap">
+                    <h4 class="framelink">Bootstrap</h4>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="Footer">
+        <h2 class="Tittle-Redes">Redes</h2>
+        <section class="Social-media" id="contato">
+            <div class="icons">
+                <a href="#" aria-label="Facebook">
+                    <img src="Arquivos/SocialMedia/Facebook-Color.svg" alt="Facebook">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="Arquivos/SocialMedia/Instagram-Color.svg" alt="Instagram">
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                    <img src="Arquivos/SocialMedia/Whatsapp-Color.svg" alt="WhatsApp">
+                </a>
+                <a href="https://github.com/CLCarmo" aria-label="GitHub">
+                    <img src="Arquivos/SocialMedia/GuthHubIcon.svg" alt="GitHub">
+                </a>
+            </div>
+        </section>
+        <section class="authorship">
+            <div>
+                &copy; Todos os direitos reservados
+            </div>
+        </section>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
